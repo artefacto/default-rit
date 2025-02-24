@@ -85,12 +85,11 @@ $userBar = $this->userBar();
             <div id="search">
                 <?php echo $this->partial('common/search-form'); ?>
             </div>
-            <?php if ($banner): ?>
+            <?php if ($banner && $this->isHomePage()): ?>
             <div class="banner">
                 <img role="presentation" src="<?php echo $this->themeSettingAssetUrl('banner'); ?>" title="Banner">
             </div>
             <?php endif; ?>
-
         </header>
         <div id="content" role="main">
             <?php echo $this->content; ?>
